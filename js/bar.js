@@ -7,7 +7,7 @@ require.config({
 require(
 	[
         'echarts',
-        'https://rawgithub.com/wy-ang/echarts/master/echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+        'https://rawgithub.com/wy-ang/echarts/master/js/chart/bar' // 使用柱状图就加载bar模块，按需加载
     ],
     function(ec){
     	var myChart = ec.init(document.getElementById('wrap')); 
