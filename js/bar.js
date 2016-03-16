@@ -7,7 +7,7 @@ require.config({
 require(
 	[
         'echarts',
-        'https://rawgithub.com/wy-ang/echarts/master/js/chart/bar' // 使用柱状图就加载bar模块，按需加载
+        'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
     ],
     function(ec){
     	var myChart = ec.init(document.getElementById('wrap')); 
@@ -22,7 +22,7 @@ require(
 		        trigger: 'axis'
 		    },
 		    grid:{
-		    	backgroundColor:'#f1f1f3',
+		    	backgroundColor:'#FFF',
 		    	borderWidth:0,
 		    	borderColor:'#f1f1f3',
 		    	z:1
@@ -34,8 +34,8 @@ require(
     		series:[
     			{
     				type:'bar',
-    				data:[1.0,2.1,3.2,4.3,5.4,6.5,7.6],
-    				barCategoryGap: '60%',
+    				data:[1.0,2.1,3.2,4.3,5.4,6.5,7.6,7.6,6.5,5.4,4.3,3.2,2.1,1.0],
+    				barCategoryGap: '10%',
     				itemStyle:{
 		    			normal:{
 		    				color:'#00bffe',
@@ -51,9 +51,14 @@ require(
 		    		}
     			}
     		],
+    		axis:{
+    			show:'true',
+    			type:'value',
+    			name:'aaa'
+    		},
     		xAxis:[
     			{
-    				data:['先秦诸子百家','近代文学','国外文学','历史试卷类','散文类','论述类文本阅读','实用类文本阅读']
+    				data:['先秦诸子百家1','近代文学1','国外文学1','历史试卷类1','散文类1','论述类文本阅读1','实用类文本阅读1','先秦诸子百家','近代文学','国外文学','历史试卷类','散文类','论述类文本阅读','实用类文本阅读']
     			}
     		],
     		yAxis:[
